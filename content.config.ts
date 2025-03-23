@@ -4,6 +4,7 @@ const variantEnum = z.enum(['solid', 'outline', 'subtle', 'soft', 'ghost', 'link
 const colorEnum = z.enum(['primary', 'secondary', 'neutral', 'error', 'warning', 'success', 'info'])
 const sizeEnum = z.enum(['xs', 'sm', 'md', 'lg', 'xl'])
 const orientationEnum = z.enum(['vertical', 'horizontal'])
+export const socialTypeEnum = z.enum(['GITHUB', 'TWITTER', 'BLOG', 'LINKEDIN', 'BLUESKY'])
 
 const baseSchema = {
   title: z.string().nonempty(),
@@ -153,5 +154,29 @@ export const collections = {
     source: '3.blog.yml',
     type: 'data',
     schema: sectionSchema
+  }),
+  speakers: defineCollection({
+    source: '3.speakers/**/*',
+    type: 'data',
+    schema: z.object({
+      firstname: z.string().nonempty(),
+      lastname: z.string().nonempty(),
+      photo: z.string().nonempty(),
+      role: z.string().nonempty(),
+      company: z
+        .object({
+          name: z.string().nonempty(),
+          link: z.string().nonempty(),
+          logo: z.string().nonempty()
+        })
+        .optional(),
+      talks: z.array(z.number()),
+      socials: z.array(
+        z.object({
+          type: socialTypeEnum,
+          link: z.string().nonempty()
+        })
+      )
+    })
   })
 }

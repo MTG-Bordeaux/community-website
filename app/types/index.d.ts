@@ -13,3 +13,5 @@ export interface BlogPost extends ParsedContent {
     avatar: Avatar
   } & Link)[]
 }
+
+export type SocialType = 'GITHUB' | 'TWITTER' | 'BLOG' | 'LINKEDIN' | 'BLUESKY'
