@@ -1,14 +1,13 @@
 <script setup lang="ts">
 import type { SpeakersCollectionItem } from '@nuxt/content';
-import SocialLinks from './SocialLinks.vue';
 
 defineProps<{ speaker: SpeakersCollectionItem }>();
-
+const emit = defineEmits(['click']);
 </script>
 
 <template>
   <UPageCard spotlight spotlight-color="primary">
-    <div class="flex">
+    <div @click="emit('click', speaker)" class="flex">
         <div class="w-1/3 flex items-center justify-center">
           <UAvatar
             :src="speaker.photo"
@@ -23,7 +22,7 @@ defineProps<{ speaker: SpeakersCollectionItem }>();
           <p v-if="speaker.company" class="text-sm text-gray-500">
             {{ speaker.company.name }}
           </p>
-          <div v-if="speaker.socials" class="mt-2 flex">
+          <div v-if="speaker.socials" class="mt-2">
             <SocialLinks :socials="speaker.socials" />
           </div>
         </div>
