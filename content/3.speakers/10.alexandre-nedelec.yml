@@ -1,11 +1,11 @@
 firstname: Alexandre
 lastname: Nedelec
-photo: /speakers/alexandre-nedelec.jpeg
+photo: /speakers/alexandre-nedelec.webp
 role: Dévelopeur
 company: 
     name: Avanade
     link: https://www.avanade.com/fr-fr
-    logo: /companies/avanade.png
+    logo: /companies/avanade.webp
 talks: [7]
 socials:
     - type: GITHUB

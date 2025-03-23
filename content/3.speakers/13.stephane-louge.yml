@@ -1,11 +1,11 @@
 firstname: Stéphane
 lastname: Louge 
-photo: /speakers/stephane-louge.png
+photo: /speakers/stephane-louge.webp
 role: Group Manager
 company: 
     name: Avanade
     link: https://www.avanade.com/fr-fr
-    logo: /companies/avanade.png
+    logo: /companies/avanade.webp
 talks: [9]
 socials:
     - type: LINKEDIN

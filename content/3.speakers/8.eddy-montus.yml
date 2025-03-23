@@ -1,11 +1,11 @@
 firstname: Eddy
 lastname: Montus
-photo: /speakers/eddy-montus.jpg
+photo: /speakers/eddy-montus.webp
 role: Head of Infra & Cloud
 company: 
     name: Hello Asso
     link: https://www.helloasso.com/
-    logo: /companies/hello-asso.png
+    logo: /companies/hello-asso.webp
 talks: [5]
 socials:
     - type: LINKEDIN
