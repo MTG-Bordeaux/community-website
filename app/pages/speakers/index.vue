@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import type { SpeakersCollectionItem } from '@nuxt/content';
 
-const { data: speakers } = await useAsyncData('speakers', () => queryCollection('speakers').all());
+const { data: speakers } = await useAsyncData('speakers', () => queryCollection('speakers').order('firstname', 'ASC').all());
 
 const selectedSpeaker = ref<SpeakersCollectionItem | null>(null);
 const openSpeakerDetails = (speaker: SpeakersCollectionItem) => {
